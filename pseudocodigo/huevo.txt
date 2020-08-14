@@ -1,6 +1,6 @@
 Revisar que ingredientes hay:
 
-prepararHuevos():
+inicio
 	si hay huevos:
 		si hay mas ingredientes:
 			elegir ingredientes
@@ -11,7 +11,7 @@ prepararHuevos():
 	sino: compraHuevos()
 		  regresar a instruccion 4
 	cocinarHuevos(huevos,ingredientesPreparados)
-
+fin
 
 consigueMasIngredientes():
 	hacer lista de ingredientes
