@@ -1,0 +1,51 @@
+inicio
+	valor = [100,50,20,10,5,2,1]
+	billetes=[127,155,250,225,110,500,1000]
+	mientras(funcione):
+		si hayCliente:
+			cuenta = consultar('numero de cuenta')
+			pin = consultar('pin')
+			si: existe(cuenta) y cuenta.verifica(pin):
+		-elegir_accion elejir consultar('que descea hacer hoy? consultar retirar'):
+						consultar: 
+							mostrar('tiene: $ ${cuenta.fondos()}')
+							si consultar('descea hacer otra accion? si no'):
+							regresar a instruccion -elegir_accion 
+						retirar: 
+							mostrar('en GNB solo puede sacar hasta 200dls')
+							mostrar('tiene: $ ${cuenta.fondos()}')
+							montoARetirar = consultar('cuanto descea retirar?')
+							si:	cuenta.fondos() - montoARetirar >= 0 y montoARetirar <= 200:
+								si: soltarBilletes(montoAretirar):
+									cuenta.retirar(montoAretirar)
+								sino:
+									mostrar('no hay suficientes billetes')
+									funcione = falso
+			sino:	
+				mostrar('cuenta no existe o pin erroneo')
+
+		mostrarPublicidadDelbanco()
+	mostrar('cajero fuera de funcionamiento, reportar con personal de GNB o pasar a caja')
+	mostrar('Que tenga un exelente dia')
+	mostrarPublicidadDelbanco()
+fin
+
+inicio soltarBilletes(monto):
+	cantidadDeBilletesEnExistencia = billetes
+	billetesADar=[]
+	inice = 0
+	mientras indice < billetes.length y monto > 0:
+		numeroDeBilletes = truncar(monto/valor[indice])
+		si numeroDeBilletes =< cantidadDeBilletesEnExistencia[indice]:
+			monto -= valor[indice]*numeroDeBilletes
+			billetesADar.push(numeroDeBilletes)
+			cantidadDeBilletesEnExistencia[indice] -= numeroDeBilletes
+		sino:
+			billetesADar.push(0)
+	if(monto>0)
+		regresar falso
+	regresar verdadero
+fin
+
+
+

@@ -1,0 +1,95 @@
+
+inicio_principal
+	la_pizzeria = elegirNuevaPizzeria()
+	si	la_pizzeria.tiene_medio_de_contacto:
+			medio_de_contacto = la_pizzeria.obtenerMediosDeContacto()
+			contacto_a_usar = elegirMedioDeContacto(medio_de_contacto)
+
+			que 	contacto_a_usar:
+				caso	aplicacion:
+							la_pizzeria.usarAplicacion()
+							ir a 	fin_principal
+				caso 	telefono:
+							la_pizzeria.llamarTelefono()
+							pedirPizza()
+							ir a	fin_principal
+				defaut:
+					ir a	inicio_principal
+
+	si no	
+		trasladarseA(la_pizzeria)
+		pedirPizza()
+
+fin_principal
+
+inicio pedirPizza():
+	saludar a empleado
+	detallar pizza
+	detallar direccion
+	despedida cordial a empleado
+
+inicio 	elegirMedioDeContacto(medios_de_contacto):
+			que medio_de_contacto quiero:
+				caso	aplicacion:
+					si 	medios_de_contacto.tiene(aplicacion)
+						regresar	medios_de_contacto.aplicacion
+					si no 	
+						ir a default
+
+				caso	telefono:
+					si 	medios_de_contacto.tiene(telefono)
+						regresar	medios_de_contacto.telefono
+					si no 	
+						ir a default
+
+				default:
+					regresar	medio_de_contacto.sacarPrimerElemento()
+fin
+
+inicio	elegirNuevaPizzeria():
+			si	PizzeriasConocidas.length > 0:
+				regresa  Pizerias_Conocidas.sacarPrimerElemento()
+			si no	ir a 	fin_principal
+fin
+
+inicio Pizzeria
+	nombre
+	direccion
+	medios_de_contacto {}
+
+	inicio 	tiene_medio_de_contacto()
+			si	medios_de_contacto.lenght > 0
+				regresar	verdadero
+			sino	
+				regresar 	falso
+	fin
+
+	inicio 	obtenerMediosDeContacto():
+		regresar medios_de_contacto
+	fin
+
+	inicio 	usarAplicacion():
+				aplicacion = medios_de_contacto.Apicacion.abrir()
+				pizza_elegida = ninguna
+
+				que 	quiero:
+					case 	especialidad:
+								seleccionar aplicacion.especialidades
+								pizza_elegida = especialidades.elegirUnaOMas()
+					case	customizar:
+								seleccionar aplicacion.armaPizza
+								pizza_elegida = armaPizza.seleccionarIngredientes()
+					default:
+						pizza_elegida = pizzaDePeperoni
+
+				aplicacion.pedirPizza(pizza_elegida)
+	fin
+
+	inicio 	llamarTelefono(pizza,direccion):
+				tomar telefono
+				digitar medios_de_contacto[numero]
+				colocar telefono.bocina cerca de horeja
+				colocar telefono.microfono cerca de boca
+				esperar a llamada_entre
+				
+	fin
