@@ -1,0 +1,39 @@
+
+inicio pedir pizza
+  numero_telefono = 34567890
+  aplicacion_movil = sí
+  herramienta_obligatoria1 = telefono
+  herramienta_obligatoria2 = creditos en telefono
+  herramienta_obligatoria3 = carga de energia en telefono
+  herramienta_opcional = wifi
+
+  si numero_telefono entonces
+    si hay herramienta_obligatoria3 entonces
+      si hay herramienta_obligatoria2 entonces
+        llamara a numero_telefono en herramienta_obligatoria1
+          si contestan entonces
+            preguntar por el menu
+            mirar opciones del menu
+            escoger opcion del menu
+            pedir opcion escogida
+          de lo contrario
+            intentar de nuevo proceso llamar a numero_telefono en herramienta_obligatoria1
+      de lo contrario
+        continuar
+        escribir: intenta con la aplicacion_movil
+    de lo contrario
+      escribir: intenta con la aplicacion_movil
+      continuar
+  de lo contrario
+    buscar aplicacion_movil
+    si hay herramienta_obligatoria2 O herramienta_opcional
+      ingresar a la aplicación
+      mirar opciones del menu
+      escoger opcion del menu
+      pedir opcion escogida    
+      esperar a que llegue pedido
+      si llego pedido entonces
+        disfrutar pizza
+      de lo contrario
+        comunicarse con numero_telefono
+Fin
