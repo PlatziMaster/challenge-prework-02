@@ -60,9 +60,27 @@ _Output:_ Pedido de pizza en dominos.com.co para recoger en el local. La pizza t
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
-```
-Pseudocódigo reto 3
-```
+**Este proceso de retiro de dinero de un cajero automatico** 
+
+### _Proceso:_ Retiro de dinero de un cajero automatico(dinero  disponible, dinero solicitado, clave)
+
+_Inputs:_ 
+* dinero disponible: cantidad de dinero que tiene el cajero para entregar.
+* dinero solicitado: cantidad de dinero que solicita el usuario.
+* clave : clave de usuario.
+ 
+_Output:_ entrega dinero solicito o informa que no lo puede realizar.
+
+> 1. Leer tarjeta.
+> 2. Solicitar clave.
+> 3. Leer clave de usuario.
+> 4. Verificar clave.
+	> A. Si la clave no es correcta, entonces muestra mensaje y salir de proceso.
+> 5. Solicita monto deseado(dinero solicitado)
+> 6. Validar si hay suficiente cantidad de dinero.
+	> A. Si no hay suficiente cantidad de dinero, entonces mostrar mensaje y salir del proceso.
+> 7. Contar dinero.
+> 8. Entregar dinero.
 
 ## Pasos a seguir:
 
