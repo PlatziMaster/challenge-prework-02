@@ -1,0 +1,113 @@
+﻿Reto 1
+
+
+Cómo cocinar un huevo 
+INICIO
+
+
+Mostrar en pantalla “QUIERES COCINAR UN HUEVO”
+si la respuesta es afirmativa / entonces 
+Mostrar en pantalla
+SI ES DE TIPO 1/2
+Tipo 1 -con cebolla 
+Tipo 2- sin cebolla
+Si es TIPO 1---- muestra en pantalla los ingredientes que necesitas y el paso a paso . 
+recipiente ,aceite ,huevo (s),sal ,cebolla.
+Colocar  en fuego. medio un recipiente por x periodo de tiempo. 
+Colocar aceite  y esperar x periodo de tiempo a que el aceite esté caliente. 
+Picar cebollas en rodajas y echarla en el recipiente con aceite.
+Colocar 1  huevos dentro del recipiente .
+Esperar por x periodo de tiempo.
+Esto es todo disfruta tu huevo cocido con cebolla
+SI ES DE TIPO 2---- muestra en pantalla los ingredientes que necesitas y el paso a paso . 
+recipiente ,aceite ,huevo (s),sal 
+Colocar  en fuego. medio un recipiente por x periodo de tiempo. 
+Colocar aceite  y esperar x periodo de tiempo a que el aceite esté caliente. 
+Picar cebollas en rodajas y echarla en el recipiente con aceite.
+Colocar 1  huevos dentro del recipiente .
+Esperar por x periodo de tiempo.
+Esto es todo disfruta tu huevo cocido sin cebolla
+SI LA RESPUESTA ES NEGATIVA 
+mostrar en pantalla lo sentimos NO PODEMOS AYUDARTE 
+
+
+FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALGORITMO PARA PEDIR UNA PIZZA 
+
+
+INICIO 
+
+
+Mostrar en pantalla “Que tipo de pizza quieres”
+ Opciones:
+  Mostrar las opciones disponibles 1 ,2,3,4,5,
+Cuando seleccione una opción  1 o 2 etc
+Seguimos con un  las dirección de domicilio
+
+
+ Muestre en pantalla cómo quiere pagar  EFECTIVO /TARJETA 
+Si es con efectivo 
+Botón de confirmar.
+Donde  redirecciona a una ventana que diga “Pedido hecho tu pizza llegará en la próxima  hora”
+Si con tarjeta 
+Botón de confirmar.
+Donde  redirecciona a una ventana que diga “Pedido hecho tu pizza llegará en la próxima  hora”
+
+
+FIN
+
+
+ Algoritmo que representa la funcionalidad de un cajero automático.
+
+
+INICIO
+Presentar en pantalla 
+usuario y clave y un botón para entrar a otra  pantalla 
+
+
+Muestre en pantalla “Que quieres hacer” 
+opción 1 -enviar dinero 
+opción 2 - ver saldo.  
+Si es opción 1 
+Redireccionar a otra página donde  presente en pantalla 
+nombre  a quien quiere enviar.
+cantidad a enviar.
+cuenta a la que quiere enviar.
+Botón de confirmar 
+
+
+Si es opción 2 
+Redireccionar a otra página donde  presente en pantalla 
+Tu saldo es --------
+Botón de salir
+FIN
