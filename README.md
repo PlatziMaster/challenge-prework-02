@@ -1,4 +1,5 @@
 # challenge-prework-02
+
 Recap: Curso Básico de Algoritmos
 
 ## Retos:
@@ -7,11 +8,11 @@ Recap: Curso Básico de Algoritmos
 
 ```
 INICIO
-	#huevos = 0
-	#ingredientes = 0
-	leer -> #huevos
-	leer -> #ingredientes
-	encender estufa y calentar sarten
+  #huevos = 0
+  #ingredientes = 0
+  leer -> #huevos
+  leer -> #ingredientes
+  encender estufa y calentar sarten
   agregar aceite al sarten
   repita mientras #huevos no vacio
     agregar huevos en el sarten
@@ -19,8 +20,8 @@ INICIO
   repita mientras #ingredientes no vacio
     agregar ingrediente al sarten
   fin mientras
-	
-	servir
+
+  servir
 FIN
 ```
 
@@ -29,15 +30,15 @@ FIN
 ```
 INICIO
   buscar pizerias
-	llamar a la pizeria
+  llamar a la pizeria
 
-  si contestan entonces 
+  si contestan entonces
     hacer pedido
     confirmar pedido
     recibir
     pagar
     disfrutar
-  de lo contrario 
+  de lo contrario
     buscar otra pizeria
   fin si
 
@@ -48,24 +49,24 @@ FIN
 
 ```
 INICIO
-	usuario = 0
-	saldo = 0
+  usuario = 0
+  saldo = 0
   montoADebitar = 0
   operacion = ''
 
-	leer -> cliente
+  leer -> cliente
   leer -> operacion
 
-  si operacion igual a retiro entonces 
+  si operacion igual a retiro entonces
     pedir clave
     validar usuario
     leer -> montoADebitar
     consultar saldo disponible
-    si saldo > montoADebitar entonces 
+    si saldo > montoADebitar entonces
       aprobar operacion
       restar saldo
-      entregar dinero 
-    de lo contrario 
+      entregar dinero
+    de lo contrario
       imprimir "saldo no disponible"
     fin si
   fin si
