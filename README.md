@@ -3,22 +3,229 @@ Recap: Curso Básico de Algoritmos
 
 ## Retos:
 
-2. Crea un algoritmo para cocinar un huevo.
+1. Crea un algoritmo para cocinar un huevo.
 
 ```
-Pseudocódigo reto 1
+Algoritmo Cocinar_un_huevo
+
+	Escribir "Bienvenido a Cocinando tus huevos favoritos"
+	Escribir "Elige que clase de huevos quieres hacer"
+	Escribir ""
+	Escribir "1. Huevos revueltos"
+	Escribir "2. Huevos a la mexicana"
+	Escribir "3. Huevos estrellados"
+	Escribir ""
+	Escribir "Eleccion:"
+	Leer eleccion
+
+	si eleccion = 1 Entonces
+		Escribir "Vamos a hacer huevos revueltos"
+		Escribir ""
+		Escribir "1. Elige cuantos huevos necesitas"
+		Escribir "2. El huevo debe ser partido a la mitad"
+		Escribir "	Para romper el huevo sigue los siguientes pasos"
+		Escribir "	2.1 Toma el huevo en tu mano"
+		Escribir "	2.2 Debes tomarlos con 3 dedos y estrellarlo suavemente sobre una superficie plana"
+		Escribir "	2.3 Vacialo en un coquito pequeño"
+		Escribir "	2.4 Repite del punto 2.1 al 2.3 dependiendo cuantos huevos quieres"
+		Escribir "	2.5 Al tener todos los huevos en el coquito, debes menearlo hasta que tenga un unico color amarillo"
+		Escribir "3. Vaciar el huevo a un sarten"
+		Escribir "	3.1 Elige un sarten plano"
+		Escribir "	3.2 Enciende un lado de la estufa y pon la sarten sobre ello"
+		Escribir "	3.3 Pon una cucharada de aceite sobre el sarten"
+		Escribir "	3.4 Una vez que el sarten esta caliente coloca el huevo batido sobre el sarten"
+		Escribir "4. Cocinar el huevo"
+		Escribir "	4.1 Menea el huevo para que no se pegue en el sarten"
+		Escribir "	4.2 Una vez que esta el huevo cocido esta listo para emplatar"
+		Escribir ""
+		Escribir "Gracias"
+	FinSi
+	Si eleccion = 2 Entonces
+		Escribir "Vamos a hacer huevos a la mexicana"
+		Escribir ""
+		Escribir "1. Elige cuantos huevos necesitas"
+		Escribir "2. El huevo debe ser partido a la mitad"
+		Escribir "	Para romper el huevo sigue los siguientes pasos"
+		Escribir "	2.1 Toma el huevo en tu mano"
+		Escribir "	2.2 Debes tomarlos con 3 dedos y estrellarlo suavemente sobre una superficie plana"
+		Escribir "	2.3 Vacialo en un coquito pequeño"
+		Escribir "	2.4 Repite del punto 2.1 al 2.3 dependiendo cuantos huevos quieres"
+		Escribir "	2.5 Al tener todos los huevos en el coquito, debes menearlo hasta que tenga un unico color amarillo"
+		Escribir "3. Corta la cebolla, el jitomate y el jalapeño"
+		Escribir "	3.1 Toma la cebolla y cortala en cuadritos pequeños"
+		Escribir "	3.2 Toma el jitomate y cortalo en cuadritos pequeños"
+		Escribir "	3.3 Toma el jalapeño y cortalo en rodajas pequeñas"
+		Escribir "4. Vaciar el huevo a un sarten"
+		Escribir "	4.1 Elige un sarten plano"
+		Escribir "	4.2 Enciende un lado de la estufa y pon la sarten sobre ello"
+		Escribir "	4.3 Pon una cucharada de aceite sobre el sarten"
+		Escribir "	4.4 Una vez que el sarten esta caliente coloca el huevo batido sobre el sarten"
+		Escribir "	4.5 Coloca el jitomate, cebolla y jalapeño sobre el sarten"
+		Escribir "5. Cocinar el huevo"
+		Escribir "	5.1 Menea el huevo para que no se pegue en el sarten"
+		Escribir "	5.2 Una vez que esta el huevo cocido y las verduras esta listo para emplatar"
+		Escribir ""
+		Escribir "Gracias"
+	Fin Si
+	Si eleccion = 3 Entonces
+		Escribir "Vamos a hacer huevos Estrellados"
+		Escribir ""
+		Escribir "1. Elige cuantos huevos necesitas"
+		Escribir "2. El huevo debe ser partido a la mitad"
+		Escribir "	Para romper el huevo sigue los siguientes pasos"
+		Escribir "	2.1 Toma el huevo en tu mano"
+		Escribir "	2.2 Debes tomarlos con 3 dedos y estrellarlo suavemente sobre una superficie plana"
+		Escribir "	2.3 Ponlo sobre el sarten sin que se revuelva la llema con la clara"
+		Escribir "	2.4 Repite del punto 2.1 al 2.3 dependiendo cuantos huevos quieres"
+		Escribir "3. Cocinar el huevo"
+		Escribir "	3.1 Elige un sarten plano"
+		Escribir "	3.2 Enciende un lado de la estufa y pon la sarten sobre ello"
+		Escribir "	3.3 Pon una cucharada de aceite sobre el sarten"
+		Escribir "	3.4 Una vez que el sarten esta caliente coloca el huevo sobre el sarten"
+		Escribir "	3.5 Cuando el huevo este cocido por la parte de abajo intenta voltearlo sin que se rompa"
+		Escribir "	3.6 Una vez terminado puedes emplatarlo"
+		Escribir ""
+		Escribir "Gracias"
+	Fin Si
+
+FinAlgoritmo
+
 ```
 
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Pseudocódigo reto 2
+Algoritmo Pedir_Una_Pizza
+
+	Escribir "Hola buenas estamos aqui para atenderle"
+	Escribir ""
+	Escribir "1. Pizza de peperoni"
+	Escribir "2. Pizza hawaiana"
+	Escribir "3. Pizza ranchera"
+
+	Escribir "¿De que quiere su pizza?"
+	Leer pizza
+	Segun pizza Hacer
+		1:
+			pizza1 = "Pieza de peperoni"
+		2:
+			pizza1 = "Pieza hawaiana"
+		3:
+			pizza1 = "Pieza ranchera"
+		De Otro Modo:
+			pizza1 = "Esa pizza no existe"
+	Fin Segun
+
+	Escribir "¿De que tamaño quiere su pizza?"
+	Escribir ""
+	Escribir "1. Chica"
+	Escribir "2. Mediana"
+	Escribir "3. Grande"
+	Escribir ""
+	Leer tamano
+	Segun tamano Hacer
+		1:
+			tamano1 = "chica"
+		2:
+			tamano1 = "Mediana"
+		3:
+			tamano1 = "Grande"
+		De Otro Modo:
+			tamano1 = "Esa tamaño no existe"
+	Fin Segun
+
+	Escribir ""
+	Escribir "Hola buenas tardes su pizza sera de " + pizza1 + " de tamaño " + tamano1
+ 	Escribir ""
+	Escribir "Su pizza estara lo mas pronto posible"
+	Escribir ""
+	Escribir "Gracias!!!"
+
+FinAlgoritmo
+
 ```
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+Algoritmo Cajero_Automatico
+
+	Definir aleat Como Entero
+	Escribir  "Bienvenido al cajero del Banco CarGDev"
+	Escribir  ""
+	Escribir  "Inserta la tarjeta porfavor"
+	Escribir  ""
+
+	aleat = azar(5999) + 1
+
+	Mientras tarjeta = 0 Hacer
+		Escribir  "0. Tarjeta no insertada"
+		Escribir  "1. Tarjeta insertada"
+		Leer tarjeta
+	Fin Mientras
+
+	Escribir  ""
+	Escribir  ""
+	Escribir  "Elige una opcion"
+	Escribir  ""
+	Escribir  "1. Retirar efectivo"
+	Escribir  "2. Consultar saldo"
+	Escribir  "3. Salir"
+
+	Leer eleccion
+
+	Mientras eleccion <> 3 Hacer
+
+		Segun eleccion Hacer
+			1:
+				Escribir "Cuanto quieres retirar"
+				Escribir "Recuerda que solo puedes retirar hasta 6000 pesos"
+				Escribir "Tu saldo es: $ " aleat
+				Leer dineroSolicitado
+				Mientras dineroSolicitado > 6000 Hacer
+					Escribir "No puedes retirar mas de 6000 pesos"
+					Escribir "Reintenta nuevamente"
+					Leer dineroSolicitado
+				Fin Mientras
+				Mientras dineroSolicitado > aleat Hacer
+					Escribir "No tienes tanto dinero disponible"
+					Escribir ""
+					Escribir "Tu saldo es: $ " aleat
+					Escribir  ""
+					Escribir "Reintenta nuevamente"
+					Leer dineroSolicitado
+				Fin Mientras
+				Escribir "Retiraste " dineroSolicitado
+				aleat = aleat - dineroSolicitado
+				Escribir "Tu saldo es: $ " aleat
+				Escribir  ""
+				Escribir  ""
+				Escribir  "Elige una opcion"
+				Escribir  ""
+				Escribir  "1. Retirar efectivo"
+				Escribir  "2. Consultar saldo"
+				Escribir  "3. Salir"
+				Escribir  ""
+				Leer eleccion
+			2:
+				Escribir ""
+				Escribir "Tu saldo es: $ " aleat
+				Escribir  ""
+				Escribir  ""
+				Escribir  "Elige una opcion"
+				Escribir  ""
+				Escribir  "1. Retirar efectivo"
+				Escribir  "2. Consultar saldo"
+				Escribir  "3. Salir"
+				Escribir  ""
+				Leer eleccion
+			De Otro Modo:
+				Escribir "Elige una opcion adecuada"
+		Fin Segun
+	Fin Mientras
+
+FinAlgoritmo
+
 ```
 
 ## Pasos a seguir:
