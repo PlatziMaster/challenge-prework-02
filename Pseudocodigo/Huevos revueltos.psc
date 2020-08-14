@@ -1,11 +1,3 @@
-# challenge-prework-02
-Recap: Curso Básico de Algoritmos
-
-## Retos:
-
-2. Crea un algoritmo para cocinar un huevo.
-
-```
 Algoritmo Cocinar_un_huevo
 	
 	Escribir "Bienvenido a Cocinando tus huevos favoritos"
@@ -26,7 +18,7 @@ Algoritmo Cocinar_un_huevo
 		Escribir "	Para romper el huevo sigue los siguientes pasos"
 		Escribir "	2.1 Toma el huevo en tu mano"
 		Escribir "	2.2 Debes tomarlos con 3 dedos y estrellarlo suavemente sobre una superficie plana"
-		Escribir "	2.3 Vacialo en un coquito pequeño"
+		Escribir "	2.3 Vacialo en un coquito peque�o"
 		Escribir "	2.4 Repite del punto 2.1 al 2.3 dependiendo cuantos huevos quieres"
 		Escribir "	2.5 Al tener todos los huevos en el coquito, debes menearlo hasta que tenga un unico color amarillo"
 		Escribir "3. Vaciar el huevo a un sarten"
@@ -48,19 +40,19 @@ Algoritmo Cocinar_un_huevo
 		Escribir "	Para romper el huevo sigue los siguientes pasos"
 		Escribir "	2.1 Toma el huevo en tu mano"
 		Escribir "	2.2 Debes tomarlos con 3 dedos y estrellarlo suavemente sobre una superficie plana"
-		Escribir "	2.3 Vacialo en un coquito pequeño"
+		Escribir "	2.3 Vacialo en un coquito peque�o"
 		Escribir "	2.4 Repite del punto 2.1 al 2.3 dependiendo cuantos huevos quieres"
 		Escribir "	2.5 Al tener todos los huevos en el coquito, debes menearlo hasta que tenga un unico color amarillo"
-		Escribir "3. Corta la cebolla, el jitomate y el jalapeño"
-		Escribir "	3.1 Toma la cebolla y cortala en cuadritos pequeños"
-		Escribir "	3.2 Toma el jitomate y cortalo en cuadritos pequeños"
-		Escribir "	3.3 Toma el jalapeño y cortalo en rodajas pequeñas"
+		Escribir "3. Corta la cebolla, el jitomate y el jalape�o"
+		Escribir "	3.1 Toma la cebolla y cortala en cuadritos peque�os"
+		Escribir "	3.2 Toma el jitomate y cortalo en cuadritos peque�os"
+		Escribir "	3.3 Toma el jalape�o y cortalo en rodajas peque�as"
 		Escribir "4. Vaciar el huevo a un sarten"
 		Escribir "	4.1 Elige un sarten plano"
 		Escribir "	4.2 Enciende un lado de la estufa y pon la sarten sobre ello"
 		Escribir "	4.3 Pon una cucharada de aceite sobre el sarten"
 		Escribir "	4.4 Una vez que el sarten esta caliente coloca el huevo batido sobre el sarten"
-		Escribir "	4.5 Coloca el jitomate, cebolla y jalapeño sobre el sarten"
+		Escribir "	4.5 Coloca el jitomate, cebolla y jalape�o sobre el sarten"
 		Escribir "5. Cocinar el huevo"
 		Escribir "	5.1 Menea el huevo para que no se pegue en el sarten"
 		Escribir "	5.2 Una vez que esta el huevo cocido y las verduras esta listo para emplatar"
@@ -87,34 +79,5 @@ Algoritmo Cocinar_un_huevo
 		Escribir ""
 		Escribir "Gracias"
 	Fin Si
-
+	
 FinAlgoritmo
-
-```
-
-2. Crea un algoritmo para pedir una pizza
-
-```
-Pseudocódigo reto 2
-```
-
-3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
-
-```
-Pseudocódigo reto 3
-```
-
-## Pasos a seguir:
-
-1. Hacer un "Fork" de este proyecto.
-2. Revolver los retos propuestos.
-3. Edita este documento "README.md" con la solucion a tus retos.
-4. Crear un Pull Request hacia este repositorio.
-
-## ¿Cómo contribuir?
-
-Si quieres agregar o mejorar algo, te invito a colaborar directamente en este repositorio: [challenge-prework-02](https://github.com/platzimaster/challenge-prework-01/)
-
-## Licencia
-
-challenge-prework-02 se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
