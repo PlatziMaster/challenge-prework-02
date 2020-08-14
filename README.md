@@ -3,7 +3,7 @@ Recap: Curso Básico de Algoritmos
 
 ## Retos:
 
-2. Crea un algoritmo para cocinar un huevo.
+1. Crea un algoritmo para cocinar un huevo.
 
 ```
 Inicio
