@@ -3,22 +3,115 @@ Recap: Curso Básico de Algoritmos
 
 ## Retos:
 
-2. Crea un algoritmo para cocinar un huevo.
+1. Crea un algoritmo para cocinar un huevo.
 
 ```
-Pseudocódigo reto 1
+Algoritmo CocinaHuevo
+	Inicia
+		huevo='';
+		huevo = capturapreparaHuevo();
+		huevos= traehuevos();
+		si huevos;
+			si huevo = 'Cocinado';
+				llena olla con agua;
+				deposita huevos en olla;
+				contador = 5;
+				mientrasque contador > 0
+					huevoCocinado();
+					contador --;
+				fin mientrasque;
+			finsi
+			si huevo = 'Frito';
+				hecha aceite sarten;
+				deposita huevos en sarten;
+				contador = 7;
+				mientrasque contador > 0
+					fritaHuevo();
+					contador --;
+				fin mientrasque
+			finsi
+			si huevo = 'Revueltos';
+				hecha aceite sarten;
+				desposita huevos en recipiente;
+				bate huevos;
+				deposita huevos en sarten;
+				contador = 9
+				mientrasque contador > 0
+					huevosRevueltos();
+					contador --;
+				fin mientrasque;
+			finsi
+			sirveHuevos();
+		delocontrario;
+			no se puedo preparar huevos;
+		finsi
+	Final
+Fin Agoritmo CocinaHuevo
 ```
 
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Pseudocódigo reto 2
+Algoritmo PedirPizza
+	Inicio
+		tipopizza = capturaSelccion();
+		reborde = capturaReborde()
+		si tipopizza = 'porsabor';
+			tamaño = seleccionaTamaño();
+			seleccion = seleccionaSaborpizza();
+		sino
+			seleccionaTamaño();
+			seleccionaIngredientes();
+		finsi
+		prepararPizza(reborde, tamaño, seleccion);
+	Final
+Fin Algoritmo PedirPizza
 ```
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+Algoritmo CajeroAutomatico
+	Inicio
+		tarjeta = lecturaTarjeta()
+		clave = lecturaClave()
+		validacion = ''
+		si tarjeta
+			validacion = validaClave(clave, tarjeta)
+			si !validacion
+				Escribir "tarjeta invalida"
+				Final
+			finsi
+		sino
+			Escribir "tarjeta invalida"
+			Final
+		finsi
+		saldo = leeSalda(validacion);
+		monto = capturaMonto();
+		si monto > saldo
+			Escribir "fondos insuficientes"
+			Final
+		finsi
+		entregado = []
+		valorEntregado = 0
+		saldoCajero = billetesCajero();
+		para billete de caja
+			si monto > 0
+				division = modulo(monto / billete.valor)
+				si division > billetes.cantidad
+					efectivo = billetes.cantidad
+				sino
+					efectivo = division
+				finsi
+				valorEntregado = valorEntregado + (billetes.valor * efectivo)
+				entregado = nuevo(billetes.valor, efectivo)
+				monto = monto - (billetes.valor * efectivo)
+			finsi
+		siguiente
+		saldo = saldo - valorEntregado;
+		actualizaSaldo(saldo);
+	Final
+Fin Algoritmo CajeroAutomatico
 ```
 
 ## Pasos a seguir:
