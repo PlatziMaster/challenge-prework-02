@@ -99,7 +99,64 @@ Fin
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+Inicio
+
+Variables
+
+Dinero en cajero
+Billetes disponibles
+Denominaciones
+Cantidad solicitada
+Tarjeta del cuentahabiente
+Datos del cuentahabiente
+Intentos del cuentahabiente
+Límite de intentos
+
+Recibir "Tarjeta del cuentahabiente"
+Recibir "Datos del cuentahabiente"
+
+Si los "Datos del cuentahabiente" son correctos
+  Entonces
+    Recibir "Cantidad solicitada"
+    Preparar "Puede retirar" con valor false.
+    Preparar "Cantidad preparada para retiro" con valor 0
+    Preparar "Cantidad a calcular" con valor "Cantidad solicitada"
+    Obtener "Denominaciones"
+
+    Por cada "Denominacion" en "Denominaciones"      
+      "Billetes necesarios por denominacion" es igual al conciente entero de "Cantidad a calcular" entre "Denominacion"
+
+      Si 
+        "Billetes necesarios por denominacion" es mayor a 0 y 
+        "Billetes necesarios por denominacion" es menor o igual a "Billetes disponibles" según su "Denominacion"
+        Entonces
+          A "Cantidad preparada para retiro" sumar la multiplicación de "Denominacion" y "Billetes necesarios por denominacion"
+          A "Cantidad a calcular" restarle la "Cantidad preparada para retiro"
+
+      Si "Cantidad a calcular" es menor o igual a 0
+        Romper ciclo
+    Fin
+
+    "Puede retirar" es igual a que la "Cantidad preparada para retiro" sea igual a "Cantidad solicitada"
+
+  Si "Puede retirar"
+    Entonces
+      Entregar "Cantidad solicitada"
+      Restar de "Dinero en cajero" la "Cantidad solicitada"
+      Reducir los billetes entregados segun sus "Denominaciones"
+    Sino
+      Notificar error
+
+  Expulsar "Tarjeta del cuentahabiente"
+
+  Sino    
+    Notificar error
+    Si los "Intentos del cuentahabiente" son mayores o iguales al "Límite de intentos"
+      Entonces
+        Retener "Tarjeta del cuentahabiente"
+      Sino
+        Expulsar "Tarjeta del cuentahabiente"
+Fin
 ```
 
 ## Pasos a seguir:
