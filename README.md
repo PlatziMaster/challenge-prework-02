@@ -91,7 +91,7 @@ Proceso:
     - Si no, regresar al paso 5.
   9.- Preguntar si el usuario quiere donar (chiste mío)
     - Si quiere donar, continuar al paso 10.
-    - Si no, cantinuar al paso 11.
+    - Si no, continuar al paso 11.
   10.- Seleccionar la cantidad a donar.
   11.- Entregar tarjeta al usuario.
   12.- Entregar efectivo.
