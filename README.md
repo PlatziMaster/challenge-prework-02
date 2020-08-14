@@ -107,7 +107,20 @@ ELSE:
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+BEGING
+OUTPUT "Welcome. Insert your card or press the button for withdrawal of money without card"
+
+IF button_is_pressed THEN:
+    pass
+ELSE IF card_is_inserted:
+    read_chip_info()
+    OUTPUT "Please type your NIP"
+    INPUT nip
+    IF nip IS correct THEN:
+        display_menu()
+    ELSE:
+        OUTPUT "WRONG NIP, TRY AGAIN"
+    
 ```
 
 ## Pasos a seguir:
