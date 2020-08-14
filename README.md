@@ -168,7 +168,80 @@ FinAlgoritmo
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Pseudocódigo reto 2
+Funcion tomar_el_celular()
+	Escribir "1. Tomar el celular"
+	Escribir "1.1 El celular esta listo para poder utilizarlo."
+	Escribir "---"
+FinFuncion
+
+Funcion esperar_llegada(minutos_de_espera)
+	la_pizza_llego <- Falso
+	
+	Repetir
+		minutos_de_espera <- minutos_de_espera - 1
+		Si minutos_de_espera == 0 Entonces
+			
+			// Este valor puede variar.
+			la_pizza_llego <- Verdadero
+			
+			Si la_pizza_llego Entonces
+				Escribir "5. La pizza ya esta en el domicilio."
+				Escribir "---"
+			SiNo
+				Escribir "5. Comunicandose con la pizzeria de nuevo."
+				llamar_pizzeria()
+			FinSi
+		FinSi
+	Hasta Que minutos_de_espera == 0
+	
+FinFuncion
+
+Funcion solicitar_pizza()
+	Escribir "4 Solicitar pizza."
+	Escribir "4.1 Brindar toda la información necesaria."
+	Escribir "4.2 Esperar por la llegada de la pizza al domicilio."
+	Escribir "---"
+	
+	// Minutos indicados de espera
+	esperar_llegada(30)
+FinFuncion
+
+Funcion llamar_pizzeria()
+	Escribir "3. Llamando a la pizzeria..."
+	Escribir "---"
+	
+	la_llamada_fue_contestada <- Verdadero
+	
+	Si la_llamada_fue_contestada Entonces
+		solicitar_pizza()
+	SiNo
+		Escribir "3.1 Intentar de nuevo."
+		Escribir "---"
+	FinSi
+FinFuncion
+
+Funcion buscar_numero_pizzeria() 
+	Escribir "2. Buscando el numero de la pizzeria..."
+	
+	num_pizzeria_en_la_agenda <- Verdadero
+	
+	Si num_pizzeria_en_la_agenda Entonces
+		Escribir "2.1 El numero de la pizzeria fue encontrado."
+		Escribir "---"
+		llamar_pizzeria()
+	SiNo
+		Escribir "2.1 El numero de la pizzeria no fue encontrado."
+		Escribir "---"
+	FinSi
+FinFuncion
+
+Algoritmo pedir_pizza
+	
+	tomar_el_celular()
+	
+	buscar_numero_pizzeria()
+	
+FinAlgoritmo
 ```
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
