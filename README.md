@@ -6,7 +6,29 @@ Recap: Curso Básico de Algoritmos
 2. Crea un algoritmo para cocinar un huevo.
 
 ```
-Pseudocódigo reto 1
+COCINAR UN HUEVO
+
+//Entrada: huevos, agua, olla, estufa, encendedor, sal.
+//Salida: Huevo listo para consumir
+
+
+inicio
+a=duro
+b=blandito
+c=huevo
+d=olla
+e=agua
+f=sal
+e=estufa
+
+para "a" y "b" tomamos " x " cantidad de "c"
+por cada "c" 200 Ml de "e" en la "d"
+encendemos "e"
+Si queremos "c + a" = 20 minutos
+Si queremos "c + b" = 10 minutos
+pelamos
+aplicamos "f"
+fin
 ```
 
 2. Crea un algoritmo para pedir una pizza
