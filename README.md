@@ -3,22 +3,84 @@ Recap: Curso Básico de Algoritmos
 
 ## Retos:
 
-2. Crea un algoritmo para cocinar un huevo.
+1. Crea un algoritmo para cocinar un huevo.
 
 ```
-Pseudocódigo reto 1
+Preparar huevos revueltos
+    var huevos = prompt(Cuantos huevos quieres?)
+    
+    variables: sarten, espatula, sal, pimienta, aceite, agua caliente
+    
+    setTimeOut(huevos en agua caliente, 20 segs)
+    
+    para sarten.contiene(menos de una cucharada de aceite) hacer
+        sarten.agregar(aceite)
+    
+    var huevos completos = romper(huevos / 2)
+
+    sarten.agregar(huevos completos)
+
+    var yemas = romper((huevos / 2) - clara )
+
+    sarten.agregar(yemas, sal, pimienta)
+
+    mientras NO huevos revueltos entonces
+        espatula.revolver(sarten)
+        return huevos revueltos
 ```
 
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Pseudocódigo reto 2
+Pedir una pizza
+    var pizzerias = google.search(pizzerias cercanas)
+    
+    var opciones = array
+    opciones.push(pizzerias)
+
+    para(opcion en opciones)
+        si opcion.contains(entrega a domicilio) entonces
+            opcion.telefono.llamar()
+                caso no contestan O no hay servicio:
+                    return null
+                caso pedido exitoso:
+                    var costo = pizza
+                    repartidor.entregar(1.15*costo)
+                    return pizza
 ```
+![Alt text](/images/busqueda.png?raw=true "Busqueda de pizzeras cercanas")
+
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+Funcionalidad de un cajero
+    billetes = [ grandes, medianos, chicos ]
+    monedas = [ grandes, medianos, chicos ]
+    
+    monto a cobrar = 0
+    
+    monto a cobrar += productos del cliente * precio
+    
+    cambio = pago del cliente - monto a cobrar
+    
+    printTicket(pago, monto a cobrar, cambio)
+
+    para (billete EN billetes)
+        SI billete MENOR QUE cambio ENTONCES
+            entregar billete
+            return cambio -= billete
+    
+    SI(cambio IGUAL A cero) entonces
+        fin SI NO
+    
+    para(moenda EN monedas)
+        SI moneda MENOR que cambio ENTONCES
+            entregar moneda
+            return cambio -= moneda
+    SI(cambio IGUAL A cero)
+        fin
+
 ```
 
 ## Pasos a seguir:
