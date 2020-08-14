@@ -124,19 +124,25 @@ inicio cajero automatico
     si se encontraron los datos entonces
       usuario = dueño de esta tarjetas
       recursos = recursos del dueño de la tarjeta
-      sì monto_retirar es menor que recursos entonces
-        si hay dinero disponible en cajero entonces
-          contar dinero solicitado
-          entregar dinero solicitado
-        de lo contrario 
-          escribir en pantalla: no hay fondos suficientes en el cajero intente mas tarde
+      si monto_retirar es menor que monto_maximo_retiro entonces
+        sì monto_retirar es menor que recursos entonces
+          si hay dinero disponible en cajero entonces
+            contar dinero solicitado
+            entregar dinero solicitado
+          de lo contrario 
+            escribir en pantalla: no hay fondos suficientes en el cajero intente mas tarde
+        de lo contrario
+          escribir en pantalla: no cuentas con fondos suficientes
+          terminar proceso
       de lo contrario
-        escribir en pantalla: no cuentas con fondos suficientes
+        escribir en pantalla: no se puede entregar ese monto
         terminar proceso
     de lo contrario
       escribir presentamos un error en el sistema intente mas tarde
+      terminar proceso
   de lo contrario
     escribir en pantalla: su tarjeta no es valida
+    terminar proceso
 fin
 
 ```
