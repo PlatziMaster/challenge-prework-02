@@ -20,7 +20,7 @@ Preparar huevos revueltos
 
     sarten.agregar(huevos completos)
 
-    var yemas = romper((huevos / 2) - yemas )
+    var yemas = romper((huevos / 2) - clara )
 
     sarten.agregar(yemas, sal, pimienta)
 
@@ -42,11 +42,11 @@ Pedir una pizza
         si opcion.contains(entrega a domicilio) entonces
             opcion.telefono.llamar()
                 caso no contestan O no hay servicio:
-                    regresar null
+                    return null
                 caso pedido exitoso:
                     var costo = pizza
                     repartidor.entregar(1.15*costo)
-                    regresar pizza
+                    return pizza
 ```
 ![Alt text](/images/busqueda.png?raw=true "Busqueda de pizzeras cercanas")
 
@@ -54,7 +54,33 @@ Pedir una pizza
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+Funcionalidad de un cajero
+    billetes = [ grandes, medianos, chicos ]
+    monedas = [ grandes, medianos, chicos ]
+    
+    monto a cobrar = 0
+    
+    monto a cobrar += productos del cliente * precio
+    
+    cambio = pago del cliente - monto a cobrar
+    
+    printTicket(pago, monto a cobrar, cambio)
+
+    para (billete EN billetes)
+        SI billete MENOR QUE cambio ENTONCES
+            entregar billete
+            return cambio -= billete
+    
+    SI(cambio IGUAL A cero) entonces
+        fin SI NO
+    
+    para(moenda EN monedas)
+        SI moneda MENOR que cambio ENTONCES
+            entregar moneda
+            return cambio -= moneda
+    SI(cambio IGUAL A cero)
+        fin
+
 ```
 
 ## Pasos a seguir:
