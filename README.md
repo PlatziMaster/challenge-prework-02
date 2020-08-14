@@ -5,21 +5,67 @@ Recap: Curso Básico de Algoritmos
 
 2. Crea un algoritmo para cocinar un huevo.
 
-```
-Pseudocódigo reto 1
-```
+inicio
+    buscar huevos
+    si hay huevos
+        entonces 
+            prender estufa
+            poner sarten al fuego
+            romper cascara de huevo
+            poner el interior de la cascara en el sarten
+            revolver con una espatula
+            si huevos listos
+                entonces
+                    sacar huevos sarten
+                fin entonces
+            fin si
+            pasar huevos del sarten al plato
+            agregar sal
+        fin entonces
+    fin si
+fin
 
 2. Crea un algoritmo para pedir una pizza
 
-```
-Pseudocódigo reto 2
-```
+inicio
+    si quiero una pizza
+        entonces 
+            decidir que pizza quiero
+            buscar donde comprar la pizza
+            llamar a pedir la pizza
+            pedir la pizza a domicilio
+            preguntar el valor total a pagar
+            esperar pizza tranquilamente
+        fin entonces
+    fin si
+fin
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
-```
-Pseudocódigo reto 3
-```
+inicio
+    mientras cajero automatico tenga plata
+        entonces
+            mostrar pantalla de acceso
+            si insertan tarjeta
+                entonces
+                    validar tarjeta
+                    si tarjeta valida
+                        entonces 
+                            entregar dinero 
+                        fin entonces
+                    fin si
+                    mostrar saldo al usuario
+                    mostrar pantalla de retirar tarjeta
+                    si retiran tarteja
+                        entonces    
+                            dejar de mostra pantalla de retirar tarjeta
+                        fin entonces
+                    fin si
+                fin entonces
+            fin si
+        fin entonces
+    fin mientras
+fin
 
 ## Pasos a seguir:
 
