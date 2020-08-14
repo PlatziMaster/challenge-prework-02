@@ -3,19 +3,19 @@ Recap: Curso Básico de Algoritmos
 
 ## Retos:
 
-2. Crea un algoritmo para cocinar un huevo.
+1. Crea un algoritmo para cocinar un huevo.
 
 ```
 Inicio
 
 Variables:
-•	Hambre
-•	Huevos
-•	Aceite
-•	Gas
-•	Sartén
-•	Plato
-•	Ingredientes extra
+Hambre
+Huevos
+Aceite
+Gas
+Sartén
+Plato
+Ingredientes extra
 
 
 Si tengo “Hambre”
@@ -58,7 +58,42 @@ Fin
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Pseudocódigo reto 2
+Inicio
+
+Variables:
+Hambre
+Dinero
+Pizza
+Complementos
+Clima
+Restaurante
+
+
+Si tengo “Hambre” y tengo "Dinero"
+  Obtener información del "Restaurante"
+  "Puedo ordenar" si el "Restaurante" está abierto y el "Restaurante" tiene cobertura y el "Clima" es adecuado
+  
+  Si "Puedo ordenar"
+    Entonces
+      Elegir "Pizza" del menú del "Restaurante"
+
+      Si mi "Dinero" es mayor o igual al costo de la "Pizza" y unos "Complementos"
+        Entonces
+          Añadir "Complementos" a mi orden"
+
+      Esperar "Pizza"
+      Si la "Pizza" llegó a mi casa
+        Entonces 
+          Pagar "Pizza" con "Dinero"
+        Sino
+          Buscar otra alternativa para comer
+    
+    Sino
+      Buscar otra alternativa para comer
+
+Sino
+  No hacer nada
+Fin
 ```
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
