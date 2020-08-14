@@ -9,13 +9,13 @@ Recap: Curso Básico de Algoritmos
 Inicio
 
 Variables:
-•	Hambre
-•	Huevos
-•	Aceite
-•	Gas
-•	Sartén
-•	Plato
-•	Ingredientes extra
+Hambre
+Huevos
+Aceite
+Gas
+Sartén
+Plato
+Ingredientes extra
 
 
 Si tengo “Hambre”
