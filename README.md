@@ -5,9 +5,9 @@ Recap: Curso Básico de Algoritmos
 
 1. Crea un algoritmo para cocinar un huevo.
 
-**Este proceso se realizar unos huevos revueltos con salchicha para una persona los cuales son los que usualmente cocino para tener el mejor dia** 
+**Este proceso permite realizar unos huevos revueltos con salchicha para una persona los cuales son los que usualmente cocino para tener el mejor dia** 
 
-### _Proceso:_ Cocinar un huevo(ingredientes, sartén, estufa)
+### _Proceso:_ Cocinar un huevo(ingredientes, herramientas)
 
 _Inputs:_ 
 * ingredientes: { Dos huevos, Aceite, Una salchicha }
@@ -31,9 +31,32 @@ _Output:_ Huevos revueltos con salchicha para que comienzar bien el dia.
 
 2. Crea un algoritmo para pedir una pizza
 
-```
-Pseudocódigo reto 2
-```
+**Este proceso permite realizar un pedido de una pizza vía internet a dominós.com.co y recoger esta en el local de dominos** 
+
+### _Proceso:_ pedir pizza a dominos.com.co(dirección, tamaño, sabor, masa)
+
+_Inputs:_ 
+* dirección 
+* tamaño
+* tipo de masa
+* sabor
+ 
+_Output:_ Pedido de pizza en dominos.com.co para recoger en el local. La pizza tendrá tamaño, tipo de masa y sabor a su gusto.
+
+> 1. Entrar a dominos.com.co
+> 2. Presionar el botón de "recoger en la tienda"
+> 3. Seleccionar tienda en el mapa.
+> 4. Hacer click a la tienda en el mapa.
+> 5. En el modal hacer click en el botón de "orden para recoger"
+> 6. Hacer click en "Escoger tu especialidad perferida"
+> 7. Escoger tu sabor y hacer click en el.
+> 8. Hacer click en el botón de "tamaño y masa".
+> 9. Escoge tu tamaño y masa.
+> 10. Hacer click en el botón de "ingredientes".
+> 11. Deseas adicionar mas ingredientes.
+	> A. Si si desea adicionar mas ingredientes, entonces haga click sobre ellos.
+>  12. Hacer click en "acompañamientos".
+>  13. Hacer click en "agregar orden".
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
