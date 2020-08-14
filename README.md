@@ -8,6 +8,7 @@ Recap: Curso Básico de Algoritmos
 ```
 Pseudocódigo reto 1
 ```
+```
 Programa: Crea un algoritmo para cocinar un huevo.
 Modulo: main
 Variables:
@@ -31,11 +32,13 @@ Inicio:
 		Imprimir "Lo lamento, no se otra receta."
 	FinSi
 Fin
+```
 
 2. Crea un algoritmo para pedir una pizza
 
 ```
 Pseudocódigo reto 2
+```
 ```
 Programa: Crea un algoritmo para pedir una pizza
 Modulo: main
@@ -75,11 +78,13 @@ Inicio:
 		Imprimir "Gracias por pensar en una deliciosa Pizza, sera para la proxima :)."
 	FinSi
 Fin:
+```
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
 Pseudocódigo reto 3
+```
 ```
 Programa: Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 Modulo: main
@@ -122,6 +127,7 @@ Inicio:
 			Imprimir "Lo siento, solo se admiten las operacion que se muestran en este cajero"
 	FinSegun
 Fin:
+```
 
 ## Pasos a seguir:
 
