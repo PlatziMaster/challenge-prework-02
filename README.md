@@ -225,110 +225,6 @@ FinAlgoritmo
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Funcion  askForCost ( operationCost )
-	Escribir "-> Consultar saldo: $0 USD";
-	Escribir "-> Retirar saldo: $", operationCost, " USD";
-FinFuncion
-
-
-Funcion newCredit <- takeMoney ( basicUserCredit, operationCost )
-	
-	Definir newCredit, expectedMoneyTransfer Como Entero;
-	
-	newCredit = basicUserCredit;
-	expectedMoneyTransfer = 0;
-	
-	Escribir "Cuanto dinero desea sacar?";
-	Leer expectedMoneyTransfer;
-	
-	Si expectedMoneyTransfer < basicUserCredit Entonces
-		newCredit = basicUserCredit - expectedMoneyTransfer - operationCost;
-	SiNo
-		Escribir "No tiene el saldo suficiente para hacer esta transaccion";
-	FinSi
-	
-FinFuncion
-
-Funcion  checkBalance ( basicUserCredit )
-	Escribir "Estamos revisando la informacion";
-	Escribir "Usted tiene un saldo de $", basicUserCredit, " USD";
-FinFuncion
-
-Algoritmo  ATM
-
-
-    // DEFINIR LAS VARIABLES DEL PROGRAMA
-
-	
-	Definir userAction, basicUserCredit, operationCost Como Entero;
-	Definir isCreditCardInserted Como Logico;
-
-
-    // ASIGNAR VALORES ALEATORIOS A VARIABLES
-
-	
-	basicUserCredit = Aleatorio(5000, 10000);
-	operationCost = Aleatorio(1, 5);
-
-
-    // EMPEZAR A INTERACTUAR CON EL USUARIO
-
-	
-	Escribir "Por favor inserte su tarjeta";
-	
-	Escribir "Desea insertar la tarjeta?";
-	Leer isCreditCardInserted;
-
-
-    // CICLO WHILE DONDE EL USUARIO PUEDE EJECUTAR 
-    // TANTAS ACCIONES COMO QUIERA
-	
-	Mientras isCreditCardInserted Hacer
-		Escribir "Bienvenido usuario";
-
-
-        // EL USUARIO PUEDE REALIZAR 4 TIPOS DE ACCIONES
-
-		
-		Repetir
-			Escribir "Que accion desea realizar?";
-			Escribir "1) Consultar saldo";
-			Escribir "2) Retirar dinero";
-			Escribir "3) Consultar costo operaciones";
-			Escribir "4) Cancelar operacion";
-			
-			Leer userAction;
-
-
-            // POR CADA ACCION SE EJECUTA UNA FUNCION
-
-			
-			Segun userAction Hacer
-				1:
-					checkBalance(basicUserCredit);
-				2:
-					basicUserCredit = takeMoney(basicUserCredit, operationCost);
-				3:
-					askForCost(operationCost);
-				De Otro Modo:
-					isCreditCardInserted = Falso;
-			FinSegun
-		Hasta Que userAction < 4 O userAction > 0
-		
-	FinMientras
-	
-
-    // DESPEDIDA DEL USUARIO
-
-
-	Escribir "Gracias por usar este cajero";
-	
-FinAlgoritmo
-```
-
-3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
-
-```
 Funcion mostrarSalsas ( )
 	
 	Escribir "1) Boloñesa";
@@ -487,6 +383,111 @@ Proceso pizza
 	Escribir "Gracias por pedir tu pizza con nosotros, la prepararemos y te la enviaremos pronto.";
 	
 FinProceso
+
+```
+
+3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
+
+```
+Funcion  askForCost ( operationCost )
+	Escribir "-> Consultar saldo: $0 USD";
+	Escribir "-> Retirar saldo: $", operationCost, " USD";
+FinFuncion
+
+
+Funcion newCredit <- takeMoney ( basicUserCredit, operationCost )
+	
+	Definir newCredit, expectedMoneyTransfer Como Entero;
+	
+	newCredit = basicUserCredit;
+	expectedMoneyTransfer = 0;
+	
+	Escribir "Cuanto dinero desea sacar?";
+	Leer expectedMoneyTransfer;
+	
+	Si expectedMoneyTransfer < basicUserCredit Entonces
+		newCredit = basicUserCredit - expectedMoneyTransfer - operationCost;
+	SiNo
+		Escribir "No tiene el saldo suficiente para hacer esta transaccion";
+	FinSi
+	
+FinFuncion
+
+Funcion  checkBalance ( basicUserCredit )
+	Escribir "Estamos revisando la informacion";
+	Escribir "Usted tiene un saldo de $", basicUserCredit, " USD";
+FinFuncion
+
+Algoritmo  ATM
+
+
+    // DEFINIR LAS VARIABLES DEL PROGRAMA
+
+	
+	Definir userAction, basicUserCredit, operationCost Como Entero;
+	Definir isCreditCardInserted Como Logico;
+
+
+    // ASIGNAR VALORES ALEATORIOS A VARIABLES
+
+	
+	basicUserCredit = Aleatorio(5000, 10000);
+	operationCost = Aleatorio(1, 5);
+
+
+    // EMPEZAR A INTERACTUAR CON EL USUARIO
+
+	
+	Escribir "Por favor inserte su tarjeta";
+	
+	Escribir "Desea insertar la tarjeta?";
+	Leer isCreditCardInserted;
+
+
+    // CICLO WHILE DONDE EL USUARIO PUEDE EJECUTAR 
+    // TANTAS ACCIONES COMO QUIERA
+	
+	Mientras isCreditCardInserted Hacer
+		Escribir "Bienvenido usuario";
+
+
+        // EL USUARIO PUEDE REALIZAR 4 TIPOS DE ACCIONES
+
+		
+		Repetir
+			Escribir "Que accion desea realizar?";
+			Escribir "1) Consultar saldo";
+			Escribir "2) Retirar dinero";
+			Escribir "3) Consultar costo operaciones";
+			Escribir "4) Cancelar operacion";
+			
+			Leer userAction;
+
+
+            // POR CADA ACCION SE EJECUTA UNA FUNCION
+
+			
+			Segun userAction Hacer
+				1:
+					checkBalance(basicUserCredit);
+				2:
+					basicUserCredit = takeMoney(basicUserCredit, operationCost);
+				3:
+					askForCost(operationCost);
+				De Otro Modo:
+					isCreditCardInserted = Falso;
+			FinSegun
+		Hasta Que userAction < 4 O userAction > 0
+		
+	FinMientras
+	
+
+    // DESPEDIDA DEL USUARIO
+
+
+	Escribir "Gracias por usar este cajero";
+	
+FinAlgoritmo
 
 ```
 
