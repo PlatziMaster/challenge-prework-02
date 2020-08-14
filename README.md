@@ -34,13 +34,44 @@ fin
 2. Crea un algoritmo para pedir una pizza
 
 ```
-Pseudocódigo reto 2
+PEDIR PIZZA
+
+//Entrada: móvil, dinero, tarjeta
+//Salida: comer pizza
+
+inicio
+elegir pizza en la app pizza.com
+ordenar pedido
+pago en efectivo=no
+pago con tarjeta=si ingreso datos y monto a pagar
+finalizar pedido
+esperar 25 minutos
+llega la pizza
+fin
 ```
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+CAJERO AUTOMÁTICO
+
+//Entrada: clave, tarjeta, monto a retirar
+//Salida: obtener dinero del cajero
+//Tipos de datos: numeros, moneda
+
+a=consultas
+b=retiro
+c=tarjeta
+d=dinero
+
+inicio
+inserto "c" al cajero
+selecciono "a" para consular saldo - digito clave
+retiro "c"
+inserto de "c" digito clave y monto a retirar
+retiro "d"
+retiro "c"
+fin
 ```
 
 ## Pasos a seguir:
