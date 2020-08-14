@@ -6,7 +6,53 @@ Recap: Curso Básico de Algoritmos
 2. Crea un algoritmo para cocinar un huevo.
 
 ```
-Pseudocódigo reto 1
+Inicio
+
+Variables:
+•	Hambre
+•	Huevos
+•	Aceite
+•	Gas
+•	Sartén
+•	Plato
+•	Ingredientes extra
+
+
+Si tengo “Hambre”
+  Entonces
+    Verificar si tengo "Gas"
+    Verificar si hay "Huevos" en el refrigerador
+    Verificar si tengo "Aceite"
+    "Puedo cocinar" si tengo "Gas" y tengo "Huevos" y tengo "Aceite"
+
+    Si "Puedo cocinar"
+      Entonces      
+        Verificar si hay un "Plato" limpio
+        Verificar si hay un "Sartén" disponible
+        Verificar si hay "Ingredientes extra"
+
+        Si NO tengo un "Plato" y un "Sartén"
+          Entonces
+            Lavar un "Plato" y un "Sartén"
+        
+        Encender la estufa
+        Pre-calentar la "Sartén"
+        Poner "Aceite" en la "Sartén"    
+        Preparar el "Huevo"
+        Añadir el "Huevo" a la "Sartén"
+
+        Si tengo "Ingredientes extra"
+          Entonces
+            Añadir "Ingredientes extra" a la "Sartén"
+            
+        Cocinar comida
+        Servir comida en el "Plato"      
+        
+      Sino
+        Pedir una pizza
+Sino
+  No hacer nada
+Fin
 ```
 
 2. Crea un algoritmo para pedir una pizza
