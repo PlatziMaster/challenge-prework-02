@@ -1,130 +1,204 @@
-Revisar que ingredientes hay:
+
 
 inicio
-	si hay huevos:
-		si hay mas ingredientes:
-			elegir ingredientes
-			prepararIngredientes(ingredientes)
-		sino: si quieres mas ingredientes:
-					consigueMasIngredientes()
-					regresa a instruccion 5
-	sino: compraHuevos()
-		  regresar a instruccion 4
-	cocinarHuevos(huevos,ingredientesPreparados)
+	refrigerador = Refrigerador()
+	ingredientres_elegidos = {}
+	ingredientes = refrigerador.getContenido()
+	huevos = ingredientes.tiene('huevos')
+	si huevos[cantidad] > 0:
+		si ingredientes.lengh > 0:
+			ingredientres_elegidos = elegir(ingredientes)
+			frescos = consultar("Ingredientes seran frescos? 1:si 2:no")
+			ingredientes = Ingrediente.preparar(frescos,ingredientes)
+
+		sino: consultar("quieres mas ingredientes? 1:si 2:no"):
+					refrigerador.llenar()
+					ir a 	instruccion  9
+	sino: 
+		refrigerador.rellenarCanastillaHuevos()
+		regresar a instruccion 6
+	huevos.cocinarHuevos(ingredientres_elegidos)  
 fin
 
-consigueMasIngredientes():
-	hacer lista de ingredientes
-	tomar dinero nescesario
-	tomar llaves
-	ir a tienda
-	comprar ingredientes
+inicio elegir(ingredientes):
+	ingredientes_elegidos = {}
+	while consultar("quieres algo mas? 1.-si 0.-no"):
+		ingredienteElegido = consultar('que ingrediente quieres?')
+		cantidad = consultar(`cuantas unidades de ${ingredienteElegido}?`)
+		si: 	ingredientes[ingredienteElegido]:
+					ingredientes_elegidos.push(ingredienteElegido,cantidad)
+					ingredientes[ingredienteElegido].cantidad -= cantidad
+		sino:	decir('ingrediente inexistente')
+	regresar ingredientes_elegidos
+fin
 
+inicio class Refrigerador:
+	ingredientes = {}
+	constructor(this.ingredientes)
 
-prepararIngredientes(ingredientes):
-	for ingrediente in ingredientes:
-		lavar(ingrediente) 
-		picar(ingrediente)
+	inicio getContenido(): 
+		para ingrediente en ingredientes
+			decir(`ingrediente ${ingrediente.nombre} cantidad ${ingrediente.cantidad}`)
+		regresar ingredientes
+	fin
 
-		if ingrediente no quieres fresco:
-			sancocha(ingrediente)
+	inicio llenar():
+		mientras consultar("quieres agregar otro? 1.-si 0.-no"):
+			nombre = consultar('nombre de Ingrediente')
+			cantidad = consultar('cuantas unidades')
+			crudo = consultar('sera crudo el ingrediente? 1.-si 0.-no')
+			ingredientes.push(Ingrediente(nombre,cantidad,crudo))
+	fin
 
-lavar(ingrediente):
-	if ingrediente es verdura o ingrediente es fruta:
-		tomar estropajo
-		frotar estropajo contra piel ingrediente
-		abrir llave 
-		enjuagar ingrediente
-		cerrar llave
-	sino: if ingrediente es pollo o tiene escamas:
-				abrir llave 
-				frotar ingrediente hasta limpio
-				cerrar llave
+	inicio rellenarCanastillaHuevos():	
+		ingredientes['huevo'] = consultar('cuandos huevos quiere agregar?')
+	fin
+fin
 
+Inicio class Ingrediente:
+	nombre
+	cantidad
+	crudo = false
+	size= random(10cm,20cm)
+	constructor(this.nombre,this.cantidad,this.fresco)
 
-picar(ingrediente):
-	colocar tabla_de_cortar en mesa
-	tomar por el mango un cuchillo_limpio
-	colocar ingrediente sobre tabla_de_cortar
-	if ingrediente no es plano:
-		cortar ingrediente por la mitad 
-		colocar ambas mitades con lado plano tocando tabla_de_cortar
-	con mano_no_habil sugetar con seguridad ingrediente
+	inicio noCrudo() regresa not crudo
 
-	elije un tipo de picado:
-		juliana:
-			haz cortes paralelos a lo largo o ancho del ingrediente
-		cubitos:
-			haz cortes paralelos a lo largo o ancho del ingrediente
-			haz cortes transversales 
+	inicio preparar(frescos,ingredientes):
+		ingredientes = ingredientes
+		for ingrediente in ingredientes:
+			ingrediente.lavar() 
+			ingrediente.picar(consultar("1.-julianas 0.-Cuadritos"))
 
+			si ingrediente.noCrudo():
+				ingrediente.sancochar()
+		regresa ingredientes
+	fin
+	inicio lavar():
+			decir(`abriendo llave `)
+			decir(`mojando ${ingrediente.nombre}`)
+			decir(`frotando ${ingrediente.nombre}`)
+			decir(`enjuagando ingrediente`)
+			decir(`cerrando llave `)
+	fin
 
+	inicio picar(tipoDeCorte):
+		mientras ingrediente.size > 5mm:
+			ingrendinte.size -= 5mm
+			decir('cortando')
 
-cocinarHuevos(huevos,ingredientesPreparados):
-	encender estufa a fuego medio
-	preparar sarten
-	agregar un poco de aceite a sarten
-	preparar una espatula
-	elejir tipo de huevos:
-		revueltos:
-			colocar sarten en estufa
-			si hay ingredientesPreparados:
-				en un_tazon vierte huevos
-			en un_tazon vierte ingredientes
-			a un_tazon agregar sal y pimienta al gusto 
-			con tenedor haz movimientos envolventes
-			vierte mescla en sarten
-			con espatula seguir mesclando hasta que huevos esten a tu gusto
-			apagrar estufa
-			servir en un_plato revueltos
+		si not tipoDeCorte:
+			decir('rotando ingrediente')
+			ingrediente.size = random(10cm,20cm)
+			mientras ingrediente.size > 5mm:
+			ingrendinte.size -= 5mm
+			decir('cortando')
+	fin
 
-		omelet:
-			poner fuego de estufa a medio_bajo
-			colocar sarten en estufa
-			si hay ingredientesPreparados:
-				en un_tazon vierte huevos
-			en otro_tazon vertir huevos
-			a otro_tazon agregar sal y pimienta al gusto
-			con tenedor haz movimientos envolventes
-			vierte mescla en sarten
-			con una_tapa cubre sarten
-			espera 5-6 minutos
-			destapa sarten
-			agrega encima contenido de un_tazon
-			con espatula dobla el contenido del sarten
-			esperar 2-3 minutos 
-			apagar estufa
-			servir en un_plato omelet
+	inicio sancochar():
+		estufa = Estufa()
+		sarten = Sarten()
+		estufa.encender()
+		estufa.colocarObejtoSobreHornilla(sarten)
+		sarten.agregarContenido('aceite')
+		sarten.agregar(this)
+		esperar(4min)
+	fin
 
-		poche:
-			en una_olla pon agua y vinagre
-			poner estufa a fuego alto
-			poner una_olla en estufa
-			esperar a que hierva contenido de una_olla
-			tomar un_cucharon
-			poner el contenido de un huevo en un_cucharon
-			meter gentilmente un_cucharon a una_olla
-			esperar 3-4 minutos
-			sacar un_cucharon de una_olla
-			apagar estufa
-			si hay ingredientesPreparados:
+	inicio cocinarHuevos(ingredientres_elegidos)
+		estufa = Estufa()
+		sarten = Sarten()
+		decir('encendiendo estufa: FuegoMedio')
+		estufa.encender()
+		decir('Colocando sarten en estufa')
+		estufa.colocarObejtoSobreHornilla(sarten)
+		decir('agregando aceite')
+		sarten.agregarContenido('aceite')
+
+		elegir consultar('que tipo de huevos?'):
+			revueltos:
+				si hay ingredientesPreparados:
+					en un_tazon vierte huevos
+				en un_tazon vierte ingredientes
+				a un_tazon agregar sal y pimienta al gusto 
+				con tenedor haz movimientos envolventes
+				vierte mescla en sarten
+				con espatula seguir mesclando hasta que huevos esten a tu gusto
+				apagrar estufa
+				servir en un_plato revueltos
+
+			omelet:
+				poner fuego de estufa a medio_bajo
+				colocar sarten en estufa
+				si hay ingredientesPreparados:
+					en un_tazon vierte huevos
+				en otro_tazon vertir huevos
+				a otro_tazon agregar sal y pimienta al gusto
+				con tenedor haz movimientos envolventes
+				vierte mescla en sarten
+				con una_tapa cubre sarten
+				espera 5-6 minutos
+				destapa sarten
+				agrega encima contenido de un_tazon
+				con espatula dobla el contenido del sarten
+				esperar 2-3 minutos 
+				apagar estufa
+				servir en un_plato omelet
+
+			poche:
+				en una_olla pon agua y vinagre
+				poner estufa a fuego alto
+				poner una_olla en estufa
+				esperar a que hierva contenido de una_olla
+				tomar un_cucharon
+				poner el contenido de un huevo en un_cucharon
+				meter gentilmente un_cucharon a una_olla
+				esperar 3-4 minutos
+				sacar un_cucharon de una_olla
+				apagar estufa
+				si hay ingredientesPreparados:
+					servir en un_plato
+				servir en un_plato poche
+				rociar sal y pimienta el gusto
+
+			tortilla:
+				colocar sarten en estufa
+				si hay ingredientesPreparados:
+					en un_tazon vierte huevos
+				en un_tazon vierte ingredientes
+				a un_tazon agregar sal y pimienta al gusto 
+				con tenedor haz movimientos envolventes
+				vierte mescla en sarten
+				con una_tapa cubre sarten
+				espera 6-8 minutos
+				destapa sarten
+				gira 180o contenido de sarten en sarten
+				espera 2-3 minutos
+				apagar estufa
 				servir en un_plato
-			servir en un_plato poche
-			rociar sal y pimienta el gusto
 
-		tortilla:
-			colocar sarten en estufa
-			si hay ingredientesPreparados:
-				en un_tazon vierte huevos
-			en un_tazon vierte ingredientes
-			a un_tazon agregar sal y pimienta al gusto 
-			con tenedor haz movimientos envolventes
-			vierte mescla en sarten
-			con una_tapa cubre sarten
-			espera 6-8 minutos
-			destapa sarten
-			gira 180o contenido de sarten en sarten
-			espera 2-3 minutos
-			apagar estufa
-			servir en un_plato
+	fin
+fin
 
+Inicio class Estufa:
+	fuego = 'apagado'
+	objetosSobreEstufa=[]
+
+	setFuegoAlto(): fuego ='alto'
+	setFuegoBajo(): fuego ='medio'
+	setFuegoBajo(): fuego ='bajo'
+
+	encender(): fuego='bajo'
+	apagar(): fuego='apagado'
+
+	colocarObejtoSobreHornilla(objeto)
+		objetosSobreEstufa.agregar(objeto)
+fin
+
+Incio class Sarten:
+	contenido = []
+	tapado = false
+	agregarContenido(objeto): contenido.agregar(objeto)
+
+fin
+		
