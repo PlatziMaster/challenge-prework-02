@@ -18,18 +18,18 @@ programa PREPARAR-HUEVO
     abrir refrigerador;
     buscar huevos;
     si(huevos > 0) entonces {
-        mostrar("Cuantos huevos quieres?");
+        mostrar "Cuantos huevos quieres?";
         leer huevos
     } sino {
-        mostrar("No hay huevos");
+        mostrar "No hay huevos";
         fin
     }
-    mostrar("Que mas le quieres poner?");
+    mostrar "Que mas le quieres poner?";
     leer ingrediente-extra;
     buscar ingrediente-extra;
     mientras (no haya ingrediente-extra){
-        mostrar("No tienes ese ingrediente?");
-        mostrar("Que otra cosa le quieres poner?");
+        mostrar "No tienes ese ingrediente?";
+        mostrar "Que otra cosa le quieres poner?";
         leer ingrediente-extra;
         buscar ingrediente-extra;
     }
@@ -51,7 +51,7 @@ programa PREPARAR-HUEVO
         leer sal;
         agregar sal;
     }sino{
-        mostrar("No tienes sal")
+        mostrar "No tienes sal";
         fin
     }
     prender estufa;
@@ -83,11 +83,11 @@ programa PEDIR-PIZZA
     Variable precio;
     Variable tiempo-entrega;
 
-    mostrar("Que tamano quieres?");
+    mostrar "Que tamano quieres?";
     leer tamano;
-    mostrar("Que ingredientes quieres?");
+    mostrar "Que ingredientes quieres?";
     leer ingredientes
-    mostrar("A que pizzeria marcara");
+    mostrar "A que pizzeria marcara";
     leer pizzeria;
     buscar pizzeria;
     si(pizzeria)entonces{
