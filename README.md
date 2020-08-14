@@ -3,11 +3,31 @@ Recap: Curso Básico de Algoritmos
 
 ## Retos:
 
-2. Crea un algoritmo para cocinar un huevo.
+1. Crea un algoritmo para cocinar un huevo.
 
-```
-Pseudocódigo reto 1
-```
+**Este proceso se realizar unos huevos revueltos con salchicha para una persona los cuales son los que usualmente cocino para tener el mejor dia** 
+
+### _Proceso:_ Cocinar un huevo(ingredientes, sartén, estufa)
+
+_Inputs:_ 
+* ingredientes: { Dos huevos, Aceite, Una salchicha }
+* herramientas: { sartén, estufa }
+ 
+_Output:_ Huevos revueltos con salchicha para que comienzar bien el dia.
+
+> 1. Verifico que tenga todos los ingredientes y herramientas.
+	> A.  Si no tengo todos los ingredientes y herramientas, entonces toco cereales.
+> 2. Prender una hornilla de la estufa.
+> 3. Colocar sartén en la hornilla prendida.
+> 4. Vierto una cucharadita de aceite en la sartén.
+> 5. Cortar salchicha en monedas.
+> 6. Coloco la salchicha dentro de la sartén.
+> 7. Dejo cocinar por 2 minutos.
+> 8. Vierto la clara y la yema de los huevos en la sartén. 
+> 9. Esperar un minuto.
+> 10. Comenzar a revolver suavemente.
+> 11. Dejar de cocinar cuando estén en el punto que le gusten.
+> 12. Servir y comer.
 
 2. Crea un algoritmo para pedir una pizza
 
