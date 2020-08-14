@@ -109,18 +109,73 @@ ELSE:
 ```
 BEGING
 OUTPUT "Welcome. Insert your card or press the button for withdrawal of money without card"
-
+tries_counter = 0
 IF button_is_pressed THEN:
-    pass
-ELSE IF card_is_inserted:
-    read_chip_info()
-    OUTPUT "Please type your NIP"
-    INPUT nip
-    IF nip IS correct THEN:
-        display_menu()
-    ELSE:
-        OUTPUT "WRONG NIP, TRY AGAIN"
+    OUTPUT "Go to you banking app, choose withdraway without card and type in here the code in your phone screen"
+    INPUT code
     
+    IF check_code(code) IS TRUE THEN:
+        withdrawal()
+    END IF
+    ELSE:
+        OUTPUT "Wrong code. Try again"
+        INPUT code
+     
+        IF check_code(code) IS FALSE THEN:
+            OUTPUT "Wrong code. Try again later"
+    END ELSE
+END IF
+
+ELSE IF card_is_inserted:
+    IF counter < 3 THEN:
+        read_chip_info()
+        OUTPUT "Please type your PIN"
+        INPUT pin
+        check_pin(pin)
+        IF check_pin(pin) IS TRUE THEN:
+            display_menu()
+        END IF
+            
+        ELSE:
+            OUTPUT "WRONG PIN, TRY AGAIN"
+            counter += 1
+        END ELSE
+     ELSE:
+        OUTPUT "Number of tries exceeded. Card Blocked."
+     END ELSE
+   END IF
+END ELSE IF
+
+
+function display_menu:
+    OUTPUT "Choose an option 1)Withdrawal funds 2)Check balance 3)Check movementes 4)Exit"
+    INPUT selection
+    SWITCH(selection):
+        case 1:
+            withdrawal()
+        case 2:
+            OUTPUT "Your balance is: " + balance
+        case 3:
+            display_recent_movementes()
+        case 4:
+            close_application()
+            
+function withdrawal():
+    OUTPUT "Type amount to withdrawal"
+    INPUT amount
+    IF enough_cash_in_atm(amount) IS TRUE AND enough_funds_in_account(amount) THEN:
+        count_money()
+        give_money()
+    END IF
+    ELSE IF enough_cash_in_atm IS NOT TRUE THEN:
+        OUTPUT "Sorry, I don't have enough cash right now!"
+    END ELSE IF
+    ELSE IF enough_funds_in_account IS FALSE THEN:
+        OUTPUT "Sorry, you dont have enough funds!"
+        
+    END ELSE IF
+    
+            
 ```
 
 ## Pasos a seguir:
