@@ -247,8 +247,114 @@ FinAlgoritmo
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pseudocódigo reto 3
+Funcion mostrar_saldo_actual ( saldo_actual_del_usuario )
+	Escribir "Tu cuenta bancaria cuenta con un saldo actual de $", saldo_actual_del_usuario
+FinFuncion
+
+Funcion retirar_dinero ( cantidad_disponible, cantidad_a_retirar )
+	
+	Si cantidad_a_retirar < cantidad_disponible Entonces
+		Escribir "[!] En unos momentos el usuario deberia obtener su dinero."
+		Escribir "Ahora tu cantidad dinero en tu cuenta bancaria es de $", cantidad_disponible - cantidad_a_retirar
+	SiNo
+		Escribir "[!]Si el usuario no tiene la cantidad de dinero disponible no se podra realizar la operacion."
+		Escribir "No puedes retirar la cantidad de: $", cantidad_a_retirar, " por que tu saldo actual es de: $", cantidad_disponible
+	FinSi
+	
+FinFuncion
+
+Algoritmo funciones_cajero
+	
+	Escribir "1. Se debera introducir una tarjeta bancaria para poder visualizar los movimientos bancarios disponibles."
+	Escribir "---"
+	
+	tarjeta_en_el_cajero <- Falso
+	
+	Mientras NO tarjeta_en_el_cajero
+		// Se deberia indicar al usuario que necesita usar su tarjeta para realizar moviemientos.
+		Escribir "2. Se necesita introducir la tarjeta bancaria para visualizar los movimientos bancarios posibles."
+		Escribir "---"
+		
+		// El usuario introduce la tarjeta.
+    // (Esta funcion simula la lectura de la tarjeta)
+		Esperar Tecla
+
+		Escribir "3. En este punto el usuario introdujo la tarjeta."
+		Escribir "---"
+
+		// Ahora sera posible ver los movimientos bancarios disponibles para el usuario.
+		tarjeta_en_el_cajero <- Verdadero
+
+	FinMientras
+	
+	Si tarjeta_en_el_cajero Entonces
+		Escribir "4. La tarjeta ahora esta en el cajero y el usuario puede ver los movimientos bancarios disponibles"
+		Escribir "---"
+
+		// Datos correspondientes a la tarjeta bancaria del usuario.
+		nombre_del_usuario <- "Pepito"
+		cantidad_disponible <- 1000
+		
+		Escribir "5. Se le describen las opciones disponibles al usuario."
+		Escribir "---"
+		
+		Escribir "Movimientos bancarios disponibles:"
+		Escribir " [1] Revisar saldo actual"
+		Escribir " [2] Retirar"
+		Escribir " [3] Depositar"
+		Escribir " [4] Salir"
+		
+		
+		Repetir
+
+			Leer opcion_elegida
+			Segun opcion_elegida Hacer
+				1:
+					Escribir "6. En este punto el usuario podra ver su saldo actual en su cuenta bancaria."
+					mostrar_saldo_actual(cantidad_disponible)
+					Escribir "¿Qué operacion desea realizar ahora?"
+				2:
+					Escribir "7. El usuario ahora podra retirar dinero de su cuenta, siempre y cuando tenga disponible la cantidad requerida."
+					Escribir "---"
+					Escribir "Ingrese la cantidad a retirar:"
+					Leer cantidad_a_retirar
+					
+					retirar_dinero(cantidad_disponible, cantidad_a_retirar)
+					
+					Si cantidad_a_retirar < cantidad_disponible Entonces
+						cantidad_disponible <- cantidad_disponible - cantidad_a_retirar
+					FinSi
+
+          Escribir "¿Qué operacion desea realizar ahora?"
+					
+				3:
+					Escribir "8. Ahora el usuario podra depositar la cantidad deseada a su cuenta bancaria mediante el cajero."
+					Escribir "---"
+					Escribir "Ingrese la cantidad a depositar:"
+					Leer cantidad_a_depositar
+					
+					Si cantidad_a_depositar > 0 Entonces
+						
+						cantidad_disponible <- cantidad_disponible + cantidad_a_depositar
+						Escribir "9. Si todo salio bien el usuario deberia de poder ver la cantidad depositada en su cuenta."
+						Escribir "---"
+						mostrar_saldo_actual(cantidad_disponible)
+					FinSi
+          Escribir "¿Qué operacion desea realizar ahora?"
+				4:
+					Escribir "10. Ahora el usuario podra retirar su tarjeta de cajero."
+					Escribir "Expulsando tarjeta..."
+
+				De Otro Modo:
+					Escribir "Opcion incorrecta"
+			Fin Segun
+
+		Hasta Que opcion_elegida == 4	
+	FinSi
+FinAlgoritmo
 ```
+> Fue utilizado el software llamado PSeInt para lograr indentar de manera correcta el Pseudocódigo.
+
 
 ## Pasos a seguir:
 
