@@ -1,0 +1,130 @@
+Revisar que ingredientes hay:
+
+prepararHuevos():
+	si hay huevos:
+		si hay mas ingredientes:
+			elegir ingredientes
+			prepararIngredientes(ingredientes)
+		sino: si quieres mas ingredientes:
+					consigueMasIngredientes()
+					regresa a instruccion 5
+	sino: compraHuevos()
+		  regresar a instruccion 4
+	cocinarHuevos(huevos,ingredientesPreparados)
+
+
+consigueMasIngredientes():
+	hacer lista de ingredientes
+	tomar dinero nescesario
+	tomar llaves
+	ir a tienda
+	comprar ingredientes
+
+
+prepararIngredientes(ingredientes):
+	for ingrediente in ingredientes:
+		lavar(ingrediente) 
+		picar(ingrediente)
+
+		if ingrediente no quieres fresco:
+			sancocha(ingrediente)
+
+lavar(ingrediente):
+	if ingrediente es verdura o ingrediente es fruta:
+		tomar estropajo
+		frotar estropajo contra piel ingrediente
+		abrir llave 
+		enjuagar ingrediente
+		cerrar llave
+	sino: if ingrediente es pollo o tiene escamas:
+				abrir llave 
+				frotar ingrediente hasta limpio
+				cerrar llave
+
+
+picar(ingrediente):
+	colocar tabla_de_cortar en mesa
+	tomar por el mango un cuchillo_limpio
+	colocar ingrediente sobre tabla_de_cortar
+	if ingrediente no es plano:
+		cortar ingrediente por la mitad 
+		colocar ambas mitades con lado plano tocando tabla_de_cortar
+	con mano_no_habil sugetar con seguridad ingrediente
+
+	elije un tipo de picado:
+		juliana:
+			haz cortes paralelos a lo largo o ancho del ingrediente
+		cubitos:
+			haz cortes paralelos a lo largo o ancho del ingrediente
+			haz cortes transversales 
+
+
+
+cocinarHuevos(huevos,ingredientesPreparados):
+	encender estufa a fuego medio
+	preparar sarten
+	agregar un poco de aceite a sarten
+	preparar una espatula
+	elejir tipo de huevos:
+		revueltos:
+			colocar sarten en estufa
+			si hay ingredientesPreparados:
+				en un_tazon vierte huevos
+			en un_tazon vierte ingredientes
+			a un_tazon agregar sal y pimienta al gusto 
+			con tenedor haz movimientos envolventes
+			vierte mescla en sarten
+			con espatula seguir mesclando hasta que huevos esten a tu gusto
+			apagrar estufa
+			servir en un_plato revueltos
+
+		omelet:
+			poner fuego de estufa a medio_bajo
+			colocar sarten en estufa
+			si hay ingredientesPreparados:
+				en un_tazon vierte huevos
+			en otro_tazon vertir huevos
+			a otro_tazon agregar sal y pimienta al gusto
+			con tenedor haz movimientos envolventes
+			vierte mescla en sarten
+			con una_tapa cubre sarten
+			espera 5-6 minutos
+			destapa sarten
+			agrega encima contenido de un_tazon
+			con espatula dobla el contenido del sarten
+			esperar 2-3 minutos 
+			apagar estufa
+			servir en un_plato omelet
+
+		poche:
+			en una_olla pon agua y vinagre
+			poner estufa a fuego alto
+			poner una_olla en estufa
+			esperar a que hierva contenido de una_olla
+			tomar un_cucharon
+			poner el contenido de un huevo en un_cucharon
+			meter gentilmente un_cucharon a una_olla
+			esperar 3-4 minutos
+			sacar un_cucharon de una_olla
+			apagar estufa
+			si hay ingredientesPreparados:
+				servir en un_plato
+			servir en un_plato poche
+			rociar sal y pimienta el gusto
+
+		tortilla:
+			colocar sarten en estufa
+			si hay ingredientesPreparados:
+				en un_tazon vierte huevos
+			en un_tazon vierte ingredientes
+			a un_tazon agregar sal y pimienta al gusto 
+			con tenedor haz movimientos envolventes
+			vierte mescla en sarten
+			con una_tapa cubre sarten
+			espera 6-8 minutos
+			destapa sarten
+			gira 180o contenido de sarten en sarten
+			espera 2-3 minutos
+			apagar estufa
+			servir en un_plato
+
