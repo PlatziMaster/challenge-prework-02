@@ -37,7 +37,24 @@ FinAlgoritmo
 
 ```
 Pseudocódigo reto 2
-```
+```Algoritmo Realizar_pedido_de_pizza
+    Escribir VAR_1 =  Pizza
+	Escribir VAR_2 = Restaurante
+	Escribir VAR-3 = Tiempo
+	Escribir VAR_4 = Personas
+	Escribir VAR_4 = Dinero
+		
+	Escribir "Que vamos a comer";
+	Leer Pizza
+	imprimir "buscra restaurante mas cercano"
+	Escribir "para Cuantas personas es la pizza"
+	Leer Personas
+	Imprimir "solicitar pizza"
+	Leer dinero,tiempo
+	Imprimir recibir Pizza
+	Imprimir pagar pizza
+ FinAlgoritmo
+
 
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
