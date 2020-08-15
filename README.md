@@ -235,7 +235,72 @@ FinAlgoritmo
 3. Crea un algoritmo para que represente la funcionalidad de un cajero automatico.
 
 ```
-Pendiente Reto 3
+Algoritmo CajeroAutomatico
+	
+	Definir operacion Como Entero
+	
+	Escribir " Presentación Menú Opciones"
+	Escribir " [1] Consultar Saldo"
+	Escribir " [2] Retirar"
+	Escribir " [3] Retiro sin Tarjeta"
+	Escribir " [4] Transferencias"
+	Escribir " [5] Cambiar Clave"
+	Leer operacion
+	
+	Segun operacion Hacer
+		1: //Consultar Saldo
+			Escribir "1. Tomar el número de cuenta de la tarjeta"
+			Escribir "2. Consultar en la BD"
+			Escribir "3. Mostrar Saldo por pantalla a Cliente"
+			Escribir "4. Confirmar si desea recibo"
+			Escribir "5. Cerrar Operación"
+			
+		2: //Retirar
+			Escribir "1. Tomar el número de cuenta de la tarjeta"
+			Escribir "2. Consultar en la BD"
+			Escribir "3. Solicitar la Cantidad"
+			Escribir "4. Seleccionar billetes"
+			Escribir "5. Verificar Cantidad"
+			Escribir "6. Entregar Billetes"
+			Escribir "7. Imprimir Saldo"
+			Escribir "8. Cerrar Operación"
+			
+		3: //Retiro sin Tarjeta
+			Escribir "1. Ingresar numero de cedula"
+			Escribir "2. Ingresar valor girado"
+			Escribir "3. Solicitar el pin"
+			Escribir "4. Verificar número de cuenta con pin"
+			Escribir "6. Consultar en la BD"
+			Escribir "4. Seleccionar billetes"
+			Escribir "5. Verificar Cantidad"
+			Escribir "6. Entregar Billetes"
+			Escribir "7. Imprimir Operacion exitosa"
+			Escribir "8. Cerrar Operación"
+		4: //Transferencia
+			Escribir "1. Tomar el número de cuenta de la tarjeta"
+			Escribir "2. Consultar en la BD"
+			Escribir "3. Ingresar Banco Destino"
+			Escribir "4. Tipo de Cuenta [A]horros [C]orriente"
+			Escribir "5. Ingresar número de Cuenta"
+			Escribir "6. Ingresar Nombre del Titular Cuenta"
+			Escribir "7. Ingresar número de cedula"
+			Escribir "8. Aprobar Transferencia"
+			Escribir "9. Mensaje de Transacción exitosa"
+			Escribir "7. Imprimir Saldo"
+			Escribir "8. Cerrar Operación"
+		5: //Cambiar Clave
+			Escribir "1. Tomar el número de cuenta de la tarjeta"
+			Escribir "2. Consultar en la BD"
+			Escribir "3. Solicitar contraseña anterior"
+			Escribir "4. Solicitar contraseña nueva"
+			Escribir "5. Imprimir mensaje exitoso"
+			Escribir "6. Cerrar operación"
+		De Otro Modo:
+			Escribir "ESCOGER UNA OPCION VALIDA"
+	Fin Segun
+	
+FinAlgoritmo
+
 ```
 
 ## Pasos a seguir:
