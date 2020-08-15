@@ -8,6 +8,30 @@ Recap: Curso Básico de Algoritmos
 ```
 Pseudocódigo reto 1
 ```
+Algoritmo Preparar_Huevos_cocidos
+  Escribir VAR_1 = Huevos
+	Escribir VAR_2 = Agua
+	Escribir VAR-3 = olla
+	Escribir VAR_4 = Estufa
+	Escribir VAR_5 = Fuego
+	
+	Escribir "Se tienen huevos en el refigerador";
+	Leer VAR_1;
+	Escribir "alistar olla para cocinar huevos";
+	Leer VAR_3;
+	Escribir "adicionar agua a la olla";
+	Leer VAR_2,VAR_3;
+	Escribir "coloque los huevos en la olla y el agua"
+	Leer VAR_1,VAR_2,VAR_3
+	Escribir "Prender fojon estufa"
+	Leer  VAR_4 prendida;
+	Escribir "colocar olla sobre el fojon";
+	Escribir "como prefiere los huevos";
+	leer tibios,duros;
+	Imprimir "Huevos tibios cocinar cinco minutos, huevos duros quince minutos";
+	Imprimir "pelar los huevos";
+	Escribir "tomar huevos cocinados";	
+FinAlgoritmo
 
 2. Crea un algoritmo para pedir una pizza
 
