@@ -1,0 +1,43 @@
+Pseudocodigo_pedirPizza
+
+inicio
+
+   
+     REPITA
+  	imprimir "levante el telefono y marque a pepinospizza"
+	leer -> llamada pepinospizza
+	   SI llamada pepinospizza es falso ENTONCES
+		imprimir "por favor disque el numero"	
+
+     HASTA llamada pepinospizza realizada	  
+	
+     REPITA
+	 imprimir "saludar formalmente y dar los datos personales 
+		 sobre ubicacion, metodo de pago, nombre y telefono(s)"
+	 leer -> ubicacion, metodo_pago, nombre, telefono(s)
+		SI ubicacion es falso ENTONCES
+		   imprimir"No encontramos su direccion, puede verificar
+			que sea la correcta?"
+		CASO CONTRARIO ubicacion no registrada ENTONCES
+			imprimir "suministre un punto de referencia
+			cercana a su residencia para hacer la entrega"
+	HASTA obtener una ubicacion de entrega
+
+		
+	REPITA MIENTRAS sabor>=1 cantidad>=1 tamaño>=1	pizza>=1	
+	   imprimir "luego de escuchar los sabores disponibles escoja
+		     cuantas pizza desea, el tamaño de la pizza 
+		      y que sabor desea, recuerde que agregar mas de 2 sabores
+		      por pizza tiene un costo adicional"
+	    leer-> sabor(es), cantidad(es), tamaño(s)			
+		SI sabores por pizza son > 2 ENTONCES
+		    imprimir "indique que sabores"
+		    leer -> saboresAdicionales
+			SaboresAdicionales = pizza + 2 USD.
+	fin REPITA MIENTRAS
+
+	
+          imprimir "felicidades, en" tiempo estimado a ubicacion "recibira su pedido"	
+	   imprimir " el valor de su factura es" cantidadpizzas + tamaño + SaboresAdicionales.
+				"gracias por su compra"		
+fin

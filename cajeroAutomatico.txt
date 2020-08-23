@@ -1,0 +1,51 @@
+Pseudocodigo_CajeroAutomatico
+
+inicio
+
+ 	PARA tCICLO>=0 tCICLO<20segundos
+	      
+	   CICLO REPITA
+
+		imprimir "inserte su tarjeta"
+		leer -> tarjeta
+		 SI tarjeta no se puede leer ENTONCES	
+			imprimir"intente nuevamente"
+		 CASO CONTRARIO
+			 imprimir "asista a otro cajero" 
+		FIN PARA
+
+	      REPITA MIENTRAS codigointentos <3 
+		imprimir"ingrese su codigo"
+		leer -> codigo
+		  	SI codigo es falso ENTONCES
+		          imprimir "codigo incorrecto, ingrese nuevamente su codigo"
+			  imprimir "lleva 1 intento de 3. Se bloqueara la tarjeta
+                                     por seguridad despues de 3 intento"
+			   leer -> codigointentos+1
+		FIN REPITA MIENTRAS	
+			
+           HASTA obtener codigo correcto
+		
+	     
+		imprimir "que desea hacer? {1:sacar dinero}{2:cambio clave}{3:consultar saldo}"
+		leer ->1
+		leer ->2
+		leer ->3
+			SI Leer== 1 ENTONCES
+				imprimir "indique cantidad"
+				 leer-> cantidad
+				  imprimir"estamos contando su dinero"
+			FIN SI
+
+			SI leer==2 ENTONCES 
+				imprimir "ingrese su nueva clave"
+				leer -> claveNueva
+				imprimir "su clave cambio satisfactoriamente"
+			FIN SI	
+
+			SI leer==3 ENTONCES
+				imprimir"su saldo disponible es" saldoTotal
+
+	FIN PARA
+		
+fin
