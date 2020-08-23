@@ -1,0 +1,31 @@
+Pseudocodigo_CocinarHuevo
+
+inicio
+
+   cantidad_huevos: 1 unidad
+   cantidad_Agua: 250 ml
+   utensilio_olla: 1 unidad
+   cocina-estufa_conGasConsumo: = 5 minutos (igual a 5 minutos)
+     
+  	imprimir "introduzca el huevo en la olla con Agua"
+	leer -> huevo_en_olla
+	   SI huevo_en_olla es falso ENTONCES
+		imprimir "por favor introduzca el huevo!"	
+	   CASO CONTRARIO
+	        leer -> cocinar
+	imprimir "encienda la cocina-estufa"
+	leer -> Cocina-estufa_encendida
+	   SI cocina-estufa_encendida es falso ENTONCES
+		imprimir "por favor encienda la cocina-estufa"
+	  
+	   CASO CONTRARIO
+		leer -> cocinar
+	
+	cocinar PARA t = 0min HASTA t = 5min HACER
+
+		cocinar huevo para cocinar
+		
+		SI t = 5min ENTONCES
+	          imprimir "felicidades ya puedes disfrutar su comida"	
+			
+fin
